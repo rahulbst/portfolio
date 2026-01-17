@@ -88,14 +88,11 @@ nav ul li a:hover {
 }
 
 .name {
-    font-size: 2.3rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    background: linear-gradient(to right, #fff, #fffdfd);
-    
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    font-family:s;
+    background: linear-gradient(to right, #fff, #00d2ff, #fff);
+    -webkit-background-clip: text; /* Chrome, Safari, Edge ke liye */
+    background-clip: text;         /* Standard version (VS Code isi ko dhundta hai) */
+    -webkit-text-fill-color: transparent; 
+    color: transparent;            /* Fallback color */
 }
 
 /* --- Location Mini Card --- */

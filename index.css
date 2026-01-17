@@ -1,70 +1,195 @@
-@media (max-width: 992px) {
-    .profile-card {
-        padding: 60px 40px; 
-        width: 90%;
-    }
-    .name {
-        font-size: 2rem; 
-    }
+/* Google Fonts - Modern Gaming Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #020202; /* Deep Black Background */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Navigation (Fixed & Black) --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000000;
+    padding: 15px 0;
+    z-index: 1000;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d2ff; /* Neon Blue Hover */
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+/* --- Home Section --- */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0b 100%);
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 100px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: float 4s ease-in-out infinite; /* Floating Animation */
+    transition: transform 0.4s ease, border 0.4s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+    border: 1px solid #00d2ff;
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+}
+
+.label {
+    font-family: 'Orbitron', sans-serif; /* Gaming Font */
+    color: #00d2ff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.name {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #fff, #fffdfd);
+    
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-family:s;
+}
+
+/* --- Location Mini Card --- */
+.location-mini-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+
+.loc-title {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.loc-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- Social Links --- */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Icons ke beech space */
+}
+
+.social-links img {
+    filter: grayscale(1) invert(1);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.social-links a:hover img {
+    filter: grayscale(0) invert(0);
+    transform: translateY(-5px) scale(1.2);
+}
+
+/* --- About Section --- */
+#about {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+#about h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.about-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    background: #00d2ff;
+    color: #000;
+}
+
+.about-bio-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 4px solid #00d2ff;
+}
+
+.about-bio-box:hover{
+    transform: scale(1.02);
+    border: 1px solid #00d2ff;
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
 }
 
 
-@media (max-width: 768px) {
-    header {
-        padding: 10px 0;
-    }
-    
-    nav ul {
-        gap: 10px;
-    }
-    
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        font-size: 11px; 
-        letter-spacing: 0.5px;
-    }
-
-    .profile-card {
-        padding: 40px 20px;
-        border-radius: 25px;
-    }
-
-    .name {
-        font-size: 1.6rem;
-        letter-spacing: 2px;
-    }
-
-    #about {
-        padding: 60px 5%;
-    }
-
-    #about h2 {
-        font-size: 1.8rem;
-    }
-
-    .about-info-container {
-        grid-template-columns: 1fr; 
-    }
-}
-
-
-@media (max-width: 480px) {
-    .name {
-        font-size: 1.4rem;
-    }
-    
-    .location-mini-card {
-        padding: 8px 15px;
-    }
-
-    .social-links {
-        gap: 15px;
-    }
-    
-    .social-links img {
-        width: 25px; 
-    }
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
